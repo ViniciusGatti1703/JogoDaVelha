@@ -8,6 +8,7 @@ namespace JogoDaVelha
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -172,17 +173,40 @@ namespace JogoDaVelha
             {
                 MessageBox.Show($"{lblJogadorInfo.Text} GANHOU PORRAAAA!!!!!");
 
-                    //desativar os botões
-                    btnA1.Enabled = false;
-                    btnA2.Enabled = false;
-                    btnA3.Enabled = false;
-                    btnB1.Enabled = false;
-                    btnB2.Enabled = false;
-                    btnB3.Enabled = false;
-                    btnC1.Enabled = false;
-                    btnC2.Enabled = false;
-                    btnC3.Enabled = false;
-                }
+                //desativar os botões
+                btnA1.Enabled = false;
+                btnA2.Enabled = false;
+                btnA3.Enabled = false;
+                btnB1.Enabled = false;
+                btnB2.Enabled = false;
+                btnB3.Enabled = false;
+                btnC1.Enabled = false;
+                btnC2.Enabled = false;
+                btnC3.Enabled = false;
+            }
+
+            if (temosUmGanhador =! false)
+            {
+                MessageBox.Show($"{lblJogadorInfo.Text} DEU EMPATE!!!!");
+            }
         }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+          
+            btnA1.Text = string.Empty;
+            btnA2.Text = string.Empty;
+            btnA3.Text = string.Empty;
+            btnB1.Text = string.Empty;
+            btnB2.Text = string.Empty;
+            btnB3.Text = string.Empty;
+            btnC1.Text = string.Empty;
+            btnC2.Text = string.Empty;
+            btnC3.Text = string.Empty;
+
+         lblJogadorInfo.Focus();
+
+        }
+
     }
 }

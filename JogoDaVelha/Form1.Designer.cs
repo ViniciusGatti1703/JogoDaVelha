@@ -43,6 +43,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             lblHora = new Label();
             lblJogadorInfo = new Label();
+            btnReiniciar = new Button();
             SuspendLayout();
             // 
             // btnA1
@@ -203,6 +204,18 @@
             lblJogadorInfo.TabIndex = 11;
             lblJogadorInfo.Text = "label1";
             // 
+            // btnReiniciar
+            // 
+            btnReiniciar.BackColor = Color.DarkRed;
+            btnReiniciar.ForeColor = Color.White;
+            btnReiniciar.Location = new Point(469, 580);
+            btnReiniciar.Name = "btnReiniciar";
+            btnReiniciar.Size = new Size(75, 31);
+            btnReiniciar.TabIndex = 12;
+            btnReiniciar.Text = "REINICIAR";
+            btnReiniciar.UseVisualStyleBackColor = false;
+            btnReiniciar.Click += btnReiniciar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -210,6 +223,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(556, 649);
+            Controls.Add(btnReiniciar);
             Controls.Add(lblJogadorInfo);
             Controls.Add(lblHora);
             Controls.Add(btnFechar);
@@ -247,5 +261,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label lblHora;
         private Label lblJogadorInfo;
+        private Button btnReiniciar;
     }
 }
