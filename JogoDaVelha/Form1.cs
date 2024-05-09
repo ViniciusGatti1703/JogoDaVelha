@@ -54,17 +54,24 @@ namespace JogoDaVelha
 
         private void btnA1_Click(object sender, EventArgs e)
         {
-            if (btnA1.Text == "")
+            VerificarJogada(btnA1);
+        }
+
+        private void VerificarJogada(Button botaoEscolhido)
+        {
+            if (botaoEscolhido.Text == "")
             {
                 if (jogadorDaVez == 1)
                 {
-                    btnA1.Text = "X";
+                    botaoEscolhido.Text = "X";
+                    VerificarGanhador();
                     jogadorDaVez = 2;
                     lblJogadorInfo.Text = jogador2;
                 }
                 else
                 {
-                    btnA1.Text = "O";
+                    botaoEscolhido.Text = "O";
+                    VerificarGanhador();
                     jogadorDaVez = 1;
                     lblJogadorInfo.Text = jogador1;
                 }
@@ -77,187 +84,105 @@ namespace JogoDaVelha
 
         private void btnA2_Click(object sender, EventArgs e)
         {
-            if (btnA2.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnA2.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnA2.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnA2);
         }
 
         private void btnA3_Click(object sender, EventArgs e)
         {
-            if (btnA3.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnA3.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnA3.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnA3);
         }
 
         private void btnB2_Click(object sender, EventArgs e)
         {
-            if (btnB2.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnB2.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnB2.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnB2);
         }
 
         private void btnB3_Click(object sender, EventArgs e)
         {
-            if (btnB3.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnB3.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnB3.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnB3);
         }
 
         private void btnC1_Click(object sender, EventArgs e)
         {
-            if (btnC1.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnC1.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnC1.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnC1);
 
         }
 
         private void btnC2_Click(object sender, EventArgs e)
         {
-            if (btnC2.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnC2.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnC2.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnC2);
         }
 
         private void btnC3_Click(object sender, EventArgs e)
         {
-            if (btnC3.Text == "")
-            {
-                if (jogadorDaVez == 1)
-                {
-                    btnC3.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnC3.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Opção já Escolhida !");
-            }
+            VerificarJogada(btnC3);
         }
 
         private void btnB1_Click(object sender, EventArgs e)
         {
-            if (btnB1.Text == "")
+            VerificarJogada(btnB1);
+        }
+
+        private void VerificarGanhador()
+        {
+            bool temosUmGanhador = false;
+            //fileira 1
+
+            if (btnA1.Text != "" && btnA2.Text != "" && btnA3.Text != "" && btnA1.Text == btnA2.Text && btnA2.Text == btnA3.Text)
             {
-                if (jogadorDaVez == 1)
-                {
-                    btnB1.Text = "X";
-                    jogadorDaVez = 2;
-                    lblJogadorInfo.Text = jogador2;
-                }
-                else
-                {
-                    btnB1.Text = "O";
-                    jogadorDaVez = 1;
-                    lblJogadorInfo.Text = jogador1;
-                }
+                temosUmGanhador = true;
             }
-            else
+            //fileira 2
+            else if (btnB1.Text != "" && btnB2.Text != "" && btnB3.Text != "" && btnB1.Text == btnB2.Text && btnA2.Text == btnB3.Text)
             {
-                MessageBox.Show("Opção já Escolhida !");
+                temosUmGanhador = true;
             }
+            //fileira 3
+            else if (btnC1.Text != "" && btnC2.Text != "" && btnC3.Text != "" && btnC1.Text == btnC2.Text && btnC2.Text == btnC3.Text)
+            {
+                temosUmGanhador = true;
+            }
+            //fileira 4
+            else if (btnA1.Text != "" && btnB2.Text != "" && btnC3.Text != "" && btnA1.Text == btnB2.Text && btnB2.Text == btnC3.Text)
+            {
+                temosUmGanhador = true;
+            }
+            //fileira 5
+            else if (btnA3.Text != "" && btnB2.Text != "" && btnC1.Text != "" && btnA3.Text == btnB2.Text && btnB2.Text == btnC1.Text)
+            {
+                temosUmGanhador = true;
+            }
+            //fileira 6
+            else if (btnA1.Text != "" && btnB1.Text != "" && btnC1.Text != "" && btnA1.Text == btnB1.Text && btnB1.Text == btnC1.Text)
+            {
+                temosUmGanhador = true;
+            }
+            //fileira 7
+            else if (btnA2.Text != "" && btnB2.Text != "" && btnC2.Text != "" && btnA2.Text == btnB2.Text && btnB2.Text == btnC2.Text)
+            {
+                temosUmGanhador = true;
+            }
+            //fileira 8
+            else if (btnA3.Text != "" && btnB3.Text != "" && btnC3.Text != "" && btnA3.Text == btnB3.Text && btnB3.Text == btnC3.Text)
+            {
+                temosUmGanhador = true;
+            }
+
+            if (temosUmGanhador == true)
+            {
+                MessageBox.Show($"{lblJogadorInfo.Text} GANHOU PORRAAAA!!!!!");
+
+                    //desativar os botões
+                    btnA1.Enabled = false;
+                    btnA2.Enabled = false;
+                    btnA3.Enabled = false;
+                    btnB1.Enabled = false;
+                    btnB2.Enabled = false;
+                    btnB3.Enabled = false;
+                    btnC1.Enabled = false;
+                    btnC2.Enabled = false;
+                    btnC3.Enabled = false;
+                }
         }
     }
 }
